@@ -26,8 +26,9 @@ public class BrandServiceImpl implements BrandService {
     }
 
     @Override
-    public BrandDto createBrand(BrandDto brand) {
-        return null;
+    public BrandDto createBrand(BrandDto brandDto) {
+        Brand brand = brandMapper.toBrand(brandDto);
+        return brandMapper.toBrandDto(brandRepository.save(brand));
     }
 
     @Override

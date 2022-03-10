@@ -18,6 +18,8 @@ public interface BrandMapper {
 
     BrandDto toBrandDto(Brand brand);
 
+    Brand toBrand(BrandDto brandDto);
+
     BrandResponse toBrandResponse(BrandDto brandDto);
 
     List<BrandDto> toBrandDtoAsList(List<Brand> brandEntities);
